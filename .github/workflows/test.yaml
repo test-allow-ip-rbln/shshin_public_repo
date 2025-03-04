@@ -1,0 +1,19 @@
+name: Test / PR
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  title-checker:
+    name: Check PR title
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GIT_TOK }}
+
+      - name: Print
+        run: |
+          echo "Hello World!"
